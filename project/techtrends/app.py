@@ -6,6 +6,7 @@ from werkzeug.exceptions import abort
 
 db_connection_count = 0
 
+
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
@@ -21,6 +22,10 @@ def get_post(post_id):
     post = connection.execute('SELECT * FROM posts WHERE id = ?',
                         (post_id,)).fetchone()
     connection.close()
+    if post is None:
+      app.logger.info('Article not found!')
+    else:
+        app.logger.info('Article "' + post["title"] + '" retrieved!')
     return post
 
 # Define the Flask application
@@ -34,7 +39,6 @@ def index():
     posts = connection.execute('SELECT * FROM posts').fetchall()
     
     connection.close()
-    print(posts)
     return render_template('index.html', posts=posts)
 
 # Define how each individual article is rendered 
@@ -50,6 +54,7 @@ def post(post_id):
 # Define the About Us page
 @app.route('/about')
 def about():
+    app.logger.info('"About Us" page retrieved')
     return render_template('about.html')
 
 # Define the post creation functionality 
@@ -68,6 +73,8 @@ def create():
             connection.commit()
             connection.close()
 
+            app.logger.info('Article "' + title + '" created!')
+
             return redirect(url_for('index'))
 
     return render_template('create.html')
@@ -80,7 +87,6 @@ def healthcheck():
             mimetype='application/json'
     )
     app.logger.info('Status request successfull')
-    app.logger.debug('DEBUG message')
     return response
 
 
@@ -94,11 +100,15 @@ def metrics():
             status=200,
             mimetype='application/json'
     )
-    print("db_connection_count ", db_connection_count)
     app.logger.info('Metrics request successfull')
     return response
 
 
 # start the application on port 3111
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', port='3111')
+
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - - %(message)s')
+
+    app.run(host='0.0.0.0', port='3111')
+
+   
