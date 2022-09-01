@@ -1,3 +1,3 @@
 ## Techtrends
 
-Udacity techtrends project
+Udacity project - Cloud Native Fundamentals
