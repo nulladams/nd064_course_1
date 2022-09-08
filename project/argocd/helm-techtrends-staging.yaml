@@ -9,9 +9,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    # helm:
-    #   valueFiles:
-    #   - values.yaml
-    path: project/helm/templates
+    helm:
+      valueFiles:
+      - values.yaml
+    path: project/helm
     repoURL: https://github.com/nulladams/nd064_course_1
     targetRevision: HEAD
