@@ -3,5 +3,5 @@ kind: Namespace
 metadata:
   labels:
     tier: test
-  name: {{ .Values.namespace.name }} 
-  #name: sandbox 
+  #name: {{ .Values.namespace.name }} 
+  name: sandbox 
