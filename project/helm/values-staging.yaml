@@ -1,16 +1,2 @@
 namespace:
   name: sandbox
- 
-# service:
-#   port: 5111
-
-# replicaCount: 1
-
-# resources:
-#   requests:
-#     cpu: 300m
-#     memory: 90Mi
-  
-#   limits:
-#     cpu: 500m
-#     memory: 128Mi
