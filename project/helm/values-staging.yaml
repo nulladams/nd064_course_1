@@ -1,16 +1,16 @@
 namespace:
-  name: staging
+  name: sandbox
  
-service:
-  port: 5111
+# service:
+#   port: 5111
 
-replicaCount: 1
+# replicaCount: 1
 
-resources:
-  requests:
-    cpu: 300m
-    memory: 90Mi
+# resources:
+#   requests:
+#     cpu: 300m
+#     memory: 90Mi
   
-  limits:
-    cpu: 500m
-    memory: 128Mi
+#   limits:
+#     cpu: 500m
+#     memory: 128Mi
