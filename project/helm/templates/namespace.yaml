@@ -4,4 +4,3 @@ metadata:
   labels:
     tier: test
   name: {{ .Values.namespace.name }} 
-  #name: sandbox 
