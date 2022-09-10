@@ -2,6 +2,5 @@ apiVersion: v1
 kind: Namespace
 metadata:
   labels:
-    tier: test
-  name: {{ .Values.namespace.name }} 
-  #name: sandbox
+    tier: test 
+  name: sandbox
