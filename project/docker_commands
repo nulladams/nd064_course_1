@@ -1,11 +1,45 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+# docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+# docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+# docker logs c3998c43d704
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2022-09-22 01:32:56,289 - -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-09-22 01:32:56,289 - -  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2022-09-22 01:33:21,966 - - 172.17.0.1 - - [22/Sep/2022 01:33:21] "GET / HTTP/1.1" 200 -
+2022-09-22 01:33:22,014 - - 172.17.0.1 - - [22/Sep/2022 01:33:22] "GET /static/css/main.css HTTP/1.1" 200 -
+2022-09-22 01:33:22,234 - - 172.17.0.1 - - [22/Sep/2022 01:33:22] "GET /favicon.ico HTTP/1.1" 404 -
+2022-09-22 02:00:53,641 - - 172.17.0.1 - - [22/Sep/2022 02:00:53] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 02:40:48,676 - - 172.17.0.1 - - [22/Sep/2022 02:40:48] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 09:26:20,524 - - 172.17.0.1 - - [22/Sep/2022 09:26:20] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 13:50:55,032 - - 172.17.0.1 - - [22/Sep/2022 13:50:55] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 14:18:44,437 - - Article "2020 CNCF Annual Report" retrieved!
+2022-09-22 14:18:44,583 - - 172.17.0.1 - - [22/Sep/2022 14:18:44] "GET /1 HTTP/1.1" 200 -
+2022-09-22 14:18:44,730 - - 172.17.0.1 - - [22/Sep/2022 14:18:44] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 14:18:47,992 - - "About Us" page retrieved
+2022-09-22 14:18:48,003 - - 172.17.0.1 - - [22/Sep/2022 14:18:48] "GET /about HTTP/1.1" 200 -
+2022-09-22 14:18:48,135 - - 172.17.0.1 - - [22/Sep/2022 14:18:48] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 14:18:50,480 - - 172.17.0.1 - - [22/Sep/2022 14:18:50] "GET / HTTP/1.1" 200 -
+2022-09-22 14:18:50,519 - - 172.17.0.1 - - [22/Sep/2022 14:18:50] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 14:18:51,776 - - Article "Kubernetes v1.20 Release Notes" retrieved!
+2022-09-22 14:18:51,777 - - 172.17.0.1 - - [22/Sep/2022 14:18:51] "GET /3 HTTP/1.1" 200 -
+2022-09-22 14:18:51,827 - - 172.17.0.1 - - [22/Sep/2022 14:18:51] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 14:18:53,530 - - 172.17.0.1 - - [22/Sep/2022 14:18:53] "GET / HTTP/1.1" 200 -
+2022-09-22 14:18:53,558 - - 172.17.0.1 - - [22/Sep/2022 14:18:53] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 14:18:54,696 - - 172.17.0.1 - - [22/Sep/2022 14:18:54] "GET /create HTTP/1.1" 200 -
+2022-09-22 14:18:54,741 - - 172.17.0.1 - - [22/Sep/2022 14:18:54] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-22 14:19:07,069 - - Article "test" created!
+2022-09-22 14:19:07,084 - - 172.17.0.1 - - [22/Sep/2022 14:19:07] "POST /create HTTP/1.1" 302 -
+2022-09-22 14:19:07,093 - - 172.17.0.1 - - [22/Sep/2022 14:19:07] "GET / HTTP/1.1" 200 -
+2022-09-22 14:19:07,127 - - 172.17.0.1 - - [22/Sep/2022 14:19:07] "GET /static/css/main.css HTTP/1.1" 304 -
+
